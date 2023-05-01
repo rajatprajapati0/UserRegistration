@@ -8,6 +8,8 @@ namespace UserRegistration
     public class Pattern
     {
         public static string FirstName = @"^[A-Z]{1}[a-z]{2,}$";
+        public static string LastName = @"^[A-Z][a-z]{2,}$";
+
 
     }
 
@@ -18,6 +20,11 @@ namespace UserRegistration
         {
             Regex name = new Regex(Pattern.FirstName);
             return name.IsMatch(userName);
+        }
+        public bool LastName(string userLastName)
+        {
+            Regex lastname = new Regex(Pattern.LastName);
+            return lastname.IsMatch(userLastName);
         }
 
     }
