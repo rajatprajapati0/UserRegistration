@@ -11,6 +11,8 @@ namespace UserRegistration
         public static string LastName = @"^[A-Z][a-z]{2,}$";
         public static string Email = @"^(?=[a-z])[a-z 0-9.+_-]{3,}[@][0-9a-z]{3,8}.(com|com.com|io|com.au|net|org)$";
         public static string MobileNumber = @"^[+]91[ ][6-9]{1}[0-9]{9}$";
+        public static string PassWord = "^[a-z A-Z 0-9 !@#$%&_-]{8,}$";
+
     }
 
     internal class RegistrationForm
@@ -38,7 +40,12 @@ namespace UserRegistration
             return number.IsMatch(userMobileNumber);
 
         }
+        public bool Password(string userpassword)
+        {
+            Regex password = new Regex(Pattern.PassWord);
+            return password.IsMatch(userpassword);
 
+        }
 
     }
 }

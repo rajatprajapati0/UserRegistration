@@ -85,6 +85,28 @@ namespace UserRegistration
                 }
             }
 
+
+            check = false;
+            Console.WriteLine("\nMake Password minimum 8 characters required  ");
+
+            while (!check)
+            {
+                Console.Write("Enter password :");
+                check = form.Password(Console.ReadLine());
+
+                if (!check)
+                {
+                    Console.WriteLine("\nPlease follow -  Password must have minimum 8 characters ");
+
+                }
+                else
+                {
+                    Console.WriteLine("*****done");
+                }
+
+            }
+
+
         }
 
     }
