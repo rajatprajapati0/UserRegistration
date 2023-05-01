@@ -29,7 +29,7 @@ namespace UserRegistration
 
             }
 
-            form = new RegistrationForm();
+          
             check = false;
             Console.WriteLine("\nLast name starts with Cap and has minimum 3 characters");
             while (!check)
@@ -49,7 +49,7 @@ namespace UserRegistration
 
             }
 
-            form = new RegistrationForm();
+           
             check = false;
 
             while (!check)
@@ -68,7 +68,22 @@ namespace UserRegistration
 
             }
 
+            check = false;
+            Console.WriteLine("\nplease enter country code +91 and a space betweeen code and number");
 
+            while (!check)
+            {
+                Console.Write("\nEnter your Mobile No. : ");
+                check = form.MobileNumber(Console.ReadLine());
+                if (!check)
+                {
+                    Console.WriteLine("\nplease follow - please enter country code +91 and a space betweeen code and number");
+                }
+                else
+                {
+                    Console.WriteLine("******done");
+                }
+            }
 
         }
 
