@@ -87,7 +87,7 @@ namespace UserRegistration
 
 
             check = false;
-            Console.WriteLine("\nMake Password minimum 8 characters required  ");
+            Console.WriteLine("\nMake  Password must have 1 Uppercase minimum 8 characters  ");
 
             while (!check)
             {
@@ -96,7 +96,7 @@ namespace UserRegistration
 
                 if (!check)
                 {
-                    Console.WriteLine("\nPlease follow -  Password must have minimum 8 characters ");
+                    Console.WriteLine("\nPlease follow -  Password must have 1 Uppercase minimum 8 characters ");
 
                 }
                 else
